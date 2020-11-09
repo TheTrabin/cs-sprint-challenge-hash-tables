@@ -3,8 +3,18 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
+    if len(arrays) == 0:
+        return []
+    counts = {}
+    for nums in arrays:
+        for num in nums:
+            if num in counts:
+                counts[num] += 1
+            else:
+                counts[num] = 1
+    return [num for (num, count) in counts.items() if count == len(arrays)]
 
-    return result
+    # return result
 
 
 if __name__ == "__main__":

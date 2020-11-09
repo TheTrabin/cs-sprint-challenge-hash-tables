@@ -23,11 +23,44 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
 1. Hashing functions
+    A method of storing information and sorting it in a way that it's easier to index.
+    Simplified Definition: It takes in an Input and gives you a Number.
+
+    A Hash function is Deterministic or Consistent. Means what you put in always gives the same result.
+    Different things should give different results.
+    Has to return what is within Range. So a Range needs to be referred.
+
 2. Collision resolution
+    Chaining. Basically, you make a list within each slot of a Hash Table. That way it can share a Result, but if there's enough slots, they can take the load into those slots.
+
+    Each slot works like a Linked list, or essentually you make each slot into a Linked List that you can search across.
+
 3. Performance of basic hash table operations
+    Generally, o(n) is the performance measurement, where n is equal to the number of Nodes, or Slots.
+
 4. Load factor
+    Storage Capacity of the Hash Table.
+    Number of Items in a Hash Table / Total number of Slots, which measures Capacity. 0 is empty, 1 is full.
+
+    So, It would be a fractional as to if there's less items per space.
+
 5. Automatic resizing
+    You can set up your slots to be modular dependent on the amount of space used.
+    You set up a Minimum amount of Slots, usually something like 8.
+    When the amount of slots you have, you measure the amount of load you have. If you have 0.2 of the Hash Table filled, i.e. like 1/5th of the Table filled, you reduce the size no less than the minimum of slots, usually by half each time.
+    However, if you have 0.7 or more filled, you'll double the space. There's no actual Max size set, though you probably could.
+
+    For the Hash Table to function with the Resize, you essentially Copy the Data, Change the size, and then Sort everything you can into new slots from the Lists.
+
+    This can result in multiple sorts and resizing, depending on the amount of data.
+
 6. Various use cases for hash tables
+    Sorting Arrays.
+    Finding Data In Arrays.
+    Usually anything involving arrays.
+    Faster access to Data.
+    Anything that requires Indexing.
+
 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
